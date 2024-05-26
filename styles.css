@@ -1,0 +1,33 @@
+body{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+#container{
+    width: 400px;
+    height: 600px;
+    background-color: red;
+    display: flex;
+    flex-direction: column;
+}
+
+#display{
+    width: 400px;
+    flex:1;
+}
+
+.row {
+    width: 400px;
+    height: 100px;
+    display: flex;
+    flex: 1;
+}
+
+.row > button {
+    width: 100px;
+    height: 100px;
+    flex: 1;
+}
+
+#zero {
+    flex: 2.2;
+}
