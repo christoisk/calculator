@@ -82,6 +82,10 @@ document.querySelectorAll(".row > .number").forEach(button => {
 
 document.querySelectorAll(".row > .operator").forEach(button => {
     button.addEventListener("click", (e) => {
+        if(operationState == 0){
+            firstNumber = parseFloat(displayText);
+        }
+
         if(operationState == 2){
             secondNumber = parseFloat(displayText);
             firstNumber = operate(firstNumber, secondNumber, operator);
@@ -163,6 +167,38 @@ document.querySelector("#delete").addEventListener("click", button => {
     updateDisplay();
 });
 
+let keyMap = {
+    "0" : "zero",
+    "1" : "one",
+    "2" : "two",
+    "3" : "three",
+    "4" : "four",
+    "5" : "five",
+    "6" : "six",
+    "7" : "seven",
+    "8" : "eight",
+    "9" : "nine",
+    "+" : "add",
+    "-" : "subtract",
+    "*" : "multiply",
+    "x" : "multiply",
+    "/" : "divide",
+    "=" : "equal",
+    "Enter" : "equal",
+    "%" : "percentage",
+    "." : "decimal",
+    "Backspace" : "delete",
+    "Delete" : "clear",
+};
+
+document.querySelector("body").addEventListener("keydown", event => {
+    let elementID = keyMap[event.key];
+    console.log(event.key);
+    if(elementID){
+        let clickEvent = new Event('click');
+        document.querySelector("#"+elementID).dispatchEvent(clickEvent);
+    }
+})
 
 unselectButtons();
 updateDisplay();

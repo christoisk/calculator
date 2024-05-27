@@ -55,7 +55,7 @@ body{
     background-color: rgb(255, 94, 0);
 }
 
-.selected {
+.row > .selected {
     background-color: yellow;
 }
 
