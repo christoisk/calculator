@@ -112,7 +112,7 @@ document.querySelector("#clear").addEventListener("click", button => {
 
 document.querySelector("#sign").addEventListener("click", button => {
     number = parseFloat(displayText)
-    if(!number){
+    if(number){
         number *= -1;
     }
     displayText = number;
