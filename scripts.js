@@ -62,7 +62,7 @@ let operator = "";
 let displayText = 0;
 let operationState = 0;
 
-const display = document.querySelector("#display");
+const display = document.querySelector("#display-text");
 
 document.querySelectorAll(".row > .number").forEach(button => {
     button.addEventListener("click", (e) => {

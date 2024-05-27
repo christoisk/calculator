@@ -15,13 +15,25 @@ body{
     flex-direction: column;
 }
 
+#title{
+    height: 200px;
+    font-size: 30px;
+    text-align: center;
+}
+
 #display{
-    flex:1;
-    font-size: 50px;
-    text-align: end;
+    flex: 1;
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    padding-right: 10px;
     border: 2px solid black;
     border-radius: 10px;
     background-color: rgb(233, 239, 233)
+}
+
+#display-text{
+    font-size: 60px;
 }
 
 .row {
