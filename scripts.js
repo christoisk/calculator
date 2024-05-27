@@ -35,11 +35,18 @@ const operate = function(firstNumber, secondNumber, operator) {
             break;
         default:
     }
-
-    return +result.toFixed(12);
+    if(result > (9.99999999 * 10**99)){
+        return NaN
+    }
+    else {
+        return +result.toFixed(12);
+    }
 }
 
 const updateDisplay = function() {
+    if(String(displayText).length > 12){
+        displayText = parseFloat(displayText).toExponential(8);
+    }
     display.textContent = displayText;
 }
 
