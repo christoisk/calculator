@@ -5,14 +5,16 @@ body{
 #container{
     width: 400px;
     height: 600px;
-    background-color: red;
     display: flex;
     flex-direction: column;
 }
 
 #display{
-    width: 400px;
     flex:1;
+    font-size: 50px;
+    text-align: end;
+    border: 2px solid black;
+    background-color: rgb(233, 239, 233)
 }
 
 .row {
@@ -25,9 +27,21 @@ body{
 .row > button {
     width: 100px;
     height: 100px;
+    opacity: 1;
     flex: 1;
+    border: 2px solid black;
+    background-color: rgb(122, 196, 122)
 }
+
+.row > button:hover {
+    opacity: 0.5;
+}
+
 
 #zero {
     flex: 2.2;
+}
+
+.selected {
+    background-color: yellow;
 }
