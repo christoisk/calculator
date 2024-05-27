@@ -140,12 +140,29 @@ document.querySelector("#percentage").addEventListener("click", button => {
 });
 
 document.querySelector("#decimal").addEventListener("click", button => {
-    if(!(String(displayText).includes("."))){
-        displayText += ".";
+    if(operationState == 0 || operationState == 2){
+        if(!(String(displayText).includes("."))){
+            displayText += ".";
+        }
     }
     unselectButtons();
     updateDisplay();
 });
+
+document.querySelector("#delete").addEventListener("click", button => {
+    displayText = String(displayText);
+    if(operationState == 0 || operationState == 2){
+        if(displayText.length > 1){
+            displayText = displayText.slice(0, -1); 
+        }
+        else{
+            displayText = 0;
+        }
+    }
+    unselectButtons();
+    updateDisplay();
+});
+
 
 unselectButtons();
 updateDisplay();
